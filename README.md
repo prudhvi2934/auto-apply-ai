@@ -1,0 +1,83 @@
+# Auto Apply AI
+
+A Python 3.13 project using UV for dependency management.
+
+## Setup
+
+This project uses Python 3.13.0rc2 and UV for package management.
+
+### Prerequisites
+
+- Python 3.13.0rc2 (installed via pyenv)
+- UV package manager
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   uv sync
+   ```
+3. Activate the virtual environment:
+   ```bash
+   source .venv/bin/activate
+   ```
+
+## Development Tools
+
+This project includes several development tools:
+
+### Testing with pytest
+
+Run tests:
+```bash
+pytest
+```
+
+Run tests with verbose output:
+```bash
+pytest -v
+```
+
+### Code Quality with Ruff
+
+Check code quality:
+```bash
+ruff check .
+```
+
+Auto-fix issues:
+```bash
+ruff check --fix .
+```
+
+### Type Checking with MyPy
+
+Note: MyPy has known compatibility issues with Python 3.13. The module can be imported but the CLI may not work correctly.
+
+## Project Structure
+
+```
+auto-apply-ai/
+├── .venv/              # Virtual environment
+├── src/                # Source code
+│   └── auto_apply_ai/  # Main package
+│       ├── __init__.py
+│       └── main.py
+├── tests/              # Test files
+│   └── test_hello.py
+├── main.py             # Entry point script
+├── pyproject.toml      # Project configuration
+└── README.md           # This file
+```
+
+## Running the Application
+
+```bash
+python main.py
+```
+
+Or run the module directly:
+```bash
+python -m auto_apply_ai.main
+```
