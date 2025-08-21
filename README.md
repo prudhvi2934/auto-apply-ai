@@ -18,10 +18,32 @@ This project uses Python 3.13.0rc2 and UV for package management.
    ```bash
    uv sync
    ```
-3. Activate the virtual environment:
+3. Install development dependencies:
+   ```bash
+   uv sync --extra dev
+   ```
+4. Activate the virtual environment:
    ```bash
    source .venv/bin/activate
    ```
+
+### Dependencies
+
+**Main Dependencies:**
+- FastAPI - Web framework
+- Pydantic Settings - Settings management
+- SQLAlchemy - Database ORM
+- HTTPX - HTTP client
+- BeautifulSoup4 - HTML parsing
+- Python Slugify - URL-friendly strings
+- AnyIO - Async I/O utilities
+- AIOSQLite - Async SQLite
+
+**Development Dependencies:**
+- Pytest - Testing framework
+- Pytest-asyncio - Async testing support
+- Ruff - Fast Python linter
+- MyPy - Static type checker
 
 ## Development Tools
 
