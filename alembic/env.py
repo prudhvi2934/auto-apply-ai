@@ -14,8 +14,8 @@ import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from auto_apply_ai.core.db import Base
-from auto_apply_ai.core.models import *  # Import all models
+from auto_apply_ai.db.engine import Base
+from auto_apply_ai.models.entities import *  # Import all models
 from auto_apply_ai.core.settings import settings
 
 

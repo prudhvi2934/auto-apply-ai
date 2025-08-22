@@ -1,8 +1,8 @@
-# src/auto_apply_ai/core/db.py
+# src/auto_apply_ai/db/engine.py
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import event
-from auto_apply_ai.core.settings import settings
+from auto_apply_ai.config.settings import settings
 
 engine = create_async_engine(settings.DATABASE_URL, future=True, echo=False)
 

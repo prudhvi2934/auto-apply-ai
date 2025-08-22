@@ -1,11 +1,11 @@
-# src/auto_apply_ai/core/models.py
+# src/auto_apply_ai/models/entities.py
 from sqlalchemy import (
     Column, String, DateTime, Enum, Float, ForeignKey, Text, UniqueConstraint, Index
 )
 from sqlalchemy.orm import relationship
 from sqlalchemy.types import JSON
 import uuid
-from auto_apply_ai.core.db import Base
+from auto_apply_ai.db.engine import Base
 
 Status = ("new","alive","dead_link","login_wall","expired","needs_review","resolved_ats","no_ats_link","error")
 NextAction = ("tailor_resume","review_details","retry_fetch","drop","none")
