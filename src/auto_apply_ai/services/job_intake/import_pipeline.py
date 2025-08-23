@@ -2,9 +2,9 @@ from __future__ import annotations
 import csv
 from typing import List, Tuple
 from sqlalchemy.ext.asyncio import AsyncSession
-from auto_apply_ai.schemas import ImportRowWarning, ImportRowError
-from auto_apply_ai.services.ingest.normalizers import normalize_capture_row
-from auto_apply_ai.services.ingest.validators import validate_row
+from auto_apply_ai.schemas.job_intake_scm import ImportRowWarning, ImportRowError
+from auto_apply_ai.services.job_intake.ingest.normalizers import normalize_capture_row
+from auto_apply_ai.services.job_intake.ingest.validators import validate_row
 from auto_apply_ai.db.repository import create_capture, upsert_job_posting_for_capture
 from auto_apply_ai.utils.time import parse_captured_at
 

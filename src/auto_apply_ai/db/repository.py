@@ -4,7 +4,7 @@ from typing import Dict, Any, Optional, Tuple, List
 from sqlalchemy import select, update, insert
 from sqlalchemy.ext.asyncio import AsyncSession
 from auto_apply_ai.models.entities import JobPosting, JobCapture
-from auto_apply_ai.services.dedupe.keys import key_exact, key_company_title_host, host_of
+from auto_apply_ai.services.job_intake.dedupe.keys import key_exact, key_company_title_host, host_of
 
 async def create_capture(session: AsyncSession, data: Dict[str, Any]) -> str:
     cap = JobCapture(**data)

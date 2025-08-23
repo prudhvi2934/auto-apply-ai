@@ -1,6 +1,6 @@
 """Main module for Auto Apply AI."""
 import uvicorn
-from auto_apply_ai.api.api import app
+from auto_apply_ai.api.app import app
 
 
 def main():
