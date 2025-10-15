@@ -21,6 +21,10 @@ dependencies = [
     "playwright>=1.40.0",
     "langchain-google-genai>=2.0.0",
     "langchain-core>=0.2.0",
+    "pymupdf>=1.26.4",
+    "spacy>=3.8.7",
+    "pip>=25.2",
+    "openai>=2.3.0",
 ]
 
 [build-system]

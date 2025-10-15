@@ -35,7 +35,6 @@ This project uses Python 3.13.0rc2 and UV for package management.
 - SQLAlchemy - Database ORM
 - HTTPX - HTTP client
 - BeautifulSoup4 - HTML parsing
-- Python Slugify - URL-friendly strings
 - AnyIO - Async I/O utilities
 - AIOSQLite - Async SQLite
 
@@ -103,3 +102,7 @@ Or run the module directly:
 ```bash
 python -m auto_apply_ai.main
 ```
+
+IDEA for decisions
+
+I am using SQL DB as of now I will have to test it how it is doing to work. My idea is that i dont want to just give the LLM whole resume and job description and do the matching and changing based on the Similarly, I felt that taking data in structures and matching it in section by section will make more precise and efficient.
