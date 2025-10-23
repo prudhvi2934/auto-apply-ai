@@ -1,0 +1,99 @@
+[
+    {
+        "name": "senior_software_engineer_cloudscale",
+        "resume":{
+            "id": "resume_001",
+            "basics": {
+                "name": "Sarah Chen",
+                "email": "sarah.chen@email.com",
+                "location": "San Francisco, CA"
+            },
+            "summary": "Senior Software Engineer with 6 years of experience building scalable web applications. Expert in Python, AWS, and microservices architecture.",
+            "skills": ["Python", "JavaScript", "AWS", "Docker", "Kubernetes", "PostgreSQL", "Redis", "FastAPI", "React", "Git"],
+            "experience": [
+                {
+                    "company": "TechCorp",
+                    "role": "Senior Software Engineer",
+                    "duration": "2021-Present",
+                    "bullets": [
+                        "Built microservices handling 50M requests/day using Python and FastAPI",
+                        "Reduced API latency by 40% through database query optimization",
+                        "Mentored 3 junior engineers on best practices and code reviews"
+                    ]
+                },
+                {
+                    "company": "StartupXYZ",
+                    "role": "Software Engineer",
+                    "duration": "2019-2021",
+                    "bullets": [
+                        "Developed RESTful APIs serving 100K+ daily active users",
+                        "Implemented CI/CD pipeline reducing deployment time by 60%",
+                        "Migrated monolithic application to microservices architecture"
+                    ]
+                }
+            ],
+            "education": "BS Computer Science, Stanford University",
+            "certifications": "AWS Solutions Architect Associate"
+        },
+        "job_desc":{
+            "role": "Senior Software Engineer",
+            "company": "CloudScale Inc",
+            "location": "San Francisco, CA",
+            "employment_type": "Full-time",
+            "must_have": ["5+ years Python development","AWS experience","Microservices architecture","Database optimization"],
+            "nice_to_have": ["FastAPI experience","Kubernetes","Mentoring experience"],
+            "responsibilities": ["Design and implement scalable backend services","Optimize database queries and API performance","Mentor junior team members","Participate in architecture decisions"],
+            "tools": ["Python", "AWS", "Docker", "Kubernetes", "PostgreSQL"],
+            "keywords": ["microservices", "scalability", "AWS", "Python", "mentoring"],
+            "years_experience": {"minimum": 5, "preferred": 7}
+        },
+        "expected_plan":{
+            "strategy": "Tailor the resume to highlight Sarah's direct alignment with the 'Senior Software Engineer' role at 'CloudScale Inc,' emphasizing her proven track record in building and optimizing scalable microservices using Python and AWS, coupled with her leadership in mentoring and architectural contributions.",
+            "key_themes": ["Scalable Backend Development","Technical Leadership & Optimization","Cloud-Native Expertise"],
+            "gap_analysis": {
+                "direct_matches": ["Senior Software Engineer role", "6 years Python development experience (JD requires 5+)", "AWS experience (certification and practical)", "Microservices architecture implementation and migration", "Database query optimization (reduced API latency by 40%)", "Mentoring junior engineers", "FastAPI experience", "Kubernetes experience", "Docker experience", "PostgreSQL experience"],
+                "transferable": [
+                    "Built microservices handling 50M requests/day demonstrates scalable backend service design and implementation",
+                    "Developed RESTful APIs serving 100K+ daily active users showcases experience with high-volume services",
+                    "Implemented CI/CD pipeline reducing deployment time by 60% indicates strong operational and development practices"
+                ],
+                "gaps": ["Explicit mention of 'participating in architecture decisions' in experience bullet points"],
+                "how_to_address": "Emphasize the impact and scale of Sarah's work, explicitly linking her experience to the JD's responsibilities, especially 'architecture decisions' and 'design scalable backend services.' Quantify achievements where possible and ensure all 'must-have' and 'nice-to-have' skills are prominent."
+            },
+            "summary_task": {
+                "agent_name": "SUMMARY AGENT",
+                "priority_items": ["Seniority and 6 years of experience", "Python, AWS, and Microservices expertise", "Scalability and performance optimization (database/API)", "Mentoring experience" ],
+                "specific_instructions": "Rewrite the professional summary to be concise (2-3 sentences) and directly address the core requirements of the job description. Start by highlighting 'Senior Software Engineer' and immediately emphasize expertise in Python, AWS, and microservices architecture. Incorporate achievements related to database optimization, API performance, and mentoring.",
+                "context": [
+                    {"key": "Job Role","values": ["Senior Software Engineer at CloudScale Inc"]},
+                    {"key": "Key Themes","values": ["Scalable Backend Development", "Technical Leadership & Optimization", "Cloud-Native Expertise"]},
+                    {"key": "ATS Keywords", "values": ["Python", "AWS", "Microservices", "Scalability", "Database optimization","Mentoring"]}
+                ]
+            },
+            "skills_task": {
+                "agent_name": "SKILLS AGENT",
+                "priority_items": ["Python", "AWS", "Microservices architecture (implied by Docker, Kubernetes)", "Database optimization (implied by PostgreSQL)", "FastAPI", "Kubernetes", "Docker"],
+                "specific_instructions": "Reorder the skills list to prioritize 'must-have' and 'nice-to-have' skills from the job description. Ensure Python, AWS, Docker, Kubernetes, and PostgreSQL are prominently featured. Group related skills logically if it enhances readability (e.g., cloud/containerization technologies).",
+                "context": [
+                    {"key": "Job Role", "values": ["Senior Software Engineer at CloudScale Inc"] },
+                    {"key": "Must-have skills", "values": ["5+ years Python development", "AWS experience", "Microservices architecture", "Database optimization"]},                   
+                    {"key": "Nice-to-have skills","values": [ "FastAPI experience", "Kubernetes", "Mentoring experience"] },
+                    {"key": "Tools", "values": ["Python", "AWS", "Docker", "Kubernetes","PostgreSQL"] }
+                ]
+            },
+            "experience_task": {
+                "agent_name": "EXPERIENCE AGENT",
+                "priority_items": [ "Quantifiable achievements related to scalability and performance", "Microservices architecture design and implementation", "Database optimization and API performance improvements", "Mentoring junior team members", "Contributions to architecture decisions" ],
+                "specific_instructions": "Rewrite bullet points for both TechCorp and StartupXYZ to emphasize alignment with the job description's responsibilities and keywords. For TechCorp, highlight the scale (50M requests/day) and impact of microservices, explicitly linking the 40% latency reduction to database optimization. Rephrase mentoring to showcase leadership and contribution to best practices. For StartupXYZ, emphasize the 'microservices architecture' migration and 'RESTful APIs serving 100K+ daily active users' to demonstrate scalability. Ensure strong action verbs and quantify results where possible. Consider adding an implied architectural contribution if it can be supported by existing experience without fabrication.",
+                "context": [
+                    {"key": "Job Role", "values": ["Senior Software Engineer at CloudScale Inc"]},
+                    {"key": "Key Themes", "values": ["Scalable Backend Development", "Technical Leadership & Optimization", "Cloud-Native Expertise"]},
+                    {"key": "JD Responsibilities", "values": ["Design and implement scalable backend services", "Optimize database queries and API performance", "Mentor junior team members", "Participate in architecture decisions"]},
+                    {"key": "JD Keywords","values": [ "microservices", "scalability", "AWS", "Python", "mentoring"]},
+                    {"key": "Current Experience","values": ["TechCorp: Built microservices handling 50M requests/day using Python and FastAPI, Reduced API latency by 40% through database query optimization, Mentored 3 junior engineers on best practices and code reviews", "StartupXYZ: Developed RESTful APIs serving 100K+ daily active users, Implemented CI/CD pipeline reducing deployment time by 60%, Migrated monolithic application to microservices architecture"]}
+                ]
+            },
+            "ats_keywords": ["Python", "AWS", "Microservices", "Database optimization", "Mentoring", "Scalability", "FastAPI", "Kubernetes", "Docker", "PostgreSQL", "Backend services", "API performance", "Architecture decisions"]
+        }
+    }
+]
