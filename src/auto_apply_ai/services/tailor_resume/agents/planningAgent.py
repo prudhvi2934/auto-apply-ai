@@ -9,6 +9,7 @@ from google.genai.types import GenerateContentConfig
 from dotenv import load_dotenv
 import opik
 from opik import track
+from opik.integrations.genai import track_genai
 load_dotenv()
 
 class ContextItem(BaseModel):
@@ -47,13 +48,11 @@ class GeminiClient:
     Reads GEMINI_KEY from env by default (set via .env already loaded above).
     """
     def __init__(self, model: str = "gemini-2.5-flash", api_key: str | None = None, **default_config):
-        self._client = genai.Client(api_key=api_key)
+        self._client = track_genai(genai.Client(api_key=api_key))
         self._model = model
         self._default_config = default_config or {}
 
-    @track(name="gemini.generate", tags=[f"model:gemini-2.5-flash"],project_name="Auto-apply-AI")
     async def generate(self, prompt: str, **override_config) -> TailoringPlan:
-        import functools
         cfg = {**self._default_config, **(override_config or {})}
 
         def _call_genai():
@@ -192,6 +191,7 @@ Return your plan in this JSON structure:
         # plan_data = self._parse_json_response(response)
         
         return response
+        # return self.plan_with_mapped_contexts(response)
         # return TailoringPlan(
         #     strategy=plan_data["strategy"],
         #     key_themes=plan_data["key_themes"],
@@ -211,7 +211,48 @@ Return your plan in this JSON structure:
     #     if json_match:
     #         return json.loads(json_match.group(1))
     #     return json.loads(response)
+    def _dedupe_preserve_order(self,items: List[str]) -> List[str]:
+        seen = set()
+        out = []
+        for x in items:
+            if x not in seen:
+                seen.add(x)
+                out.append(x)
+        return out
 
+    def _context_list_to_map(self,ctx: Optional[List[ContextItem]]) -> Optional[Dict[str, List[str]]]:
+        if ctx is None:
+            return None
+        merged: Dict[str, List[str]] = {}
+        for item in ctx:
+            if item.key not in merged:
+                merged[item.key] = []
+            merged[item.key].extend(item.values)
+        # de-duplicate each list while preserving order
+        for k, vals in merged.items():
+            merged[k] = self._dedupe_preserve_order(vals)
+        return merged
+    
+
+    def plan_with_mapped_contexts(self,plan: TailoringPlan) -> Dict:
+        """
+        Export TailoringPlan as a dict, converting each AgentTask.context
+        from List[ContextItem] -> Dict[str, List[str]].
+        """
+        data = plan.model_dump()
+
+        def _convert_task(task_key: str):
+            if task_key in data and data[task_key] is not None:
+                ctx_list = data[task_key].get("context")
+                if ctx_list is not None:
+                    # Reconstruct ContextItem objects to reuse the parser if needed
+                    ctx_objs = [ContextItem(**c) if not isinstance(c, ContextItem) else c for c in ctx_list]
+                    data[task_key]["context"] =self._context_list_to_map(ctx_objs)
+
+        for tk in ("summary_task", "skills_task", "experience_task"):
+            _convert_task(tk)
+
+        return data
 
 
 
